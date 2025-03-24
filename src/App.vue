@@ -19,7 +19,7 @@
     <transition name="slide-right">
       <ModalBurger v-if="modals.burger" />
     </transition>
-    <snow />
+    <!-- <snow /> -->
   </component>
 </template>
 <script setup lang="ts">
@@ -203,21 +203,21 @@ onUnmounted(() => {
   opacity: 1;
 }
 
-.year-cap {
-  position: relative;
-  &:after {
-    position: absolute;
-    top: -0.5rem;
-    left: -3.3rem;
-    width: 8rem;
-    height: 8rem;
-    content: "";
-    background-image: url("./assets/new-year/cap_5.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
-}
+// .year-cap {
+//   position: relative;
+//   &:after {
+//     position: absolute;
+//     top: -0.5rem;
+//     left: -3.3rem;
+//     width: 8rem;
+//     height: 8rem;
+//     content: "";
+//     background-image: url("./assets/new-year/cap_5.png");
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//   }
+// }
 
 .sky {
   height: 100%;

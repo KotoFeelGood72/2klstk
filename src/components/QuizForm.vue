@@ -2,7 +2,7 @@
   <section class="section calc js-step-form-w">
     <div class="section_in calc__in">
       <h2 class="calc__title">
-        <cap :num="5" />
+        <!-- <cap :num="5" /> -->
         <strong>Получите предварительный расчет стоимости </strong> дома за 1
         минуту
       </h2>

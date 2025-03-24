@@ -1,9 +1,7 @@
 <template>
   <section class="section popular" v-if="projects" id="projects">
     <div class="section_in popular__in">
-      <h2 class="popular__title">
-        <cap :num="5" /><strong>Популярные проекты</strong> и цены
-      </h2>
+      <h2 class="popular__title"><strong>Популярные проекты</strong> и цены</h2>
       <div class="popular__list_w">
         <div class="popular__list">
           <div

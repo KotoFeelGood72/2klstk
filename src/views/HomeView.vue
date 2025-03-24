@@ -202,7 +202,7 @@
   <section class="section imagine">
     <div class="section_in imagine__in">
       <h2 class="imagine__title">
-        <cap :num="5" />
+        <!-- <cap :num="5" /> -->
         <strong>Представьте, как уже завтра</strong> <br />
         вы просыпаетесь в доме вашей мечты
       </h2>
@@ -278,7 +278,8 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
-        <cap :num="5" />Как мы <strong> работаем</strong>
+        <!-- <cap :num="5" /> -->
+        Как мы <strong> работаем</strong>
       </h2>
       <div class="step__list_w">
         <Swiper
@@ -333,7 +334,7 @@
   <section class="section stage js-sys-slider-w" id="steps">
     <div class="section_in stage__in">
       <h2 class="stage__title">
-        <cap :num="5" />
+        <!-- <cap :num="5" /> -->
         <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
         дом
       </h2>
@@ -429,7 +430,7 @@
         <div class="excursion__col excursion__col--info">
           <div class="excursion__info_in">
             <h2 class="excursion__title">
-              <cap :num="5" />
+              <!-- <cap :num="5" /> -->
               Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся
               объектам
             </h2>
@@ -466,7 +467,7 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
-        <cap :num="5" />
+        <!-- <cap :num="5" /> -->
         Что о нас говорят <strong data-v-b4e148ca="">довольные клиенты</strong>
       </h2>
       <div class="step__list js-step-slider js-step-slider--review">
@@ -543,7 +544,7 @@
   <section class="section step js-step-slider-w step--stage-mod">
     <div class="section_in step__in">
       <h2 class="step__title">
-        <cap :num="5" />
+        <!-- <cap :num="5" /> -->
         Чтобы быть спокойным и уверенным в качественном доме -<strong
           >вам нужен надежный подрядчик</strong
         >

@@ -61,7 +61,6 @@
             v-if="visibleProjects.length < projects.length"
             class="btn_base_s"
             @click="loadMore"
-            :caps="5"
           />
         </div>
       </div>
@@ -71,14 +70,10 @@
 
 <script setup lang="ts">
 import btn from "../ui/btn.vue";
-import cap from "../ui/cap.vue";
 import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useModalStore } from "@/stores/useModalStore";
-import {
-  useProjectsStore,
-  useProjectsStoreRefs,
-} from "@/stores/useProjectStore";
+import { useProjectsStore, useProjectsStoreRefs } from "@/stores/useProjectStore";
 
 const { openModal, closeModal } = useModalStore();
 const { getProjects } = useProjectsStore();

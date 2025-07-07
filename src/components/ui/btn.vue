@@ -1,6 +1,5 @@
 <template>
   <div class="btn" :class="[size, theme]">
-    <!-- <cap :num="caps ? caps : null" /> -->
     <div class="loading" v-if="loading">
       <Icons name="svg-spinners:eclipse" />
     </div>
@@ -12,14 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import cap from "./cap.vue";
-
 const props = defineProps<{
   name: string;
   loading?: boolean;
   icon?: string;
   size?: "small" | "normal" | "medium" | "large";
-  caps?: number;
   theme?: string;
 }>();
 </script>

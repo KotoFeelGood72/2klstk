@@ -8,9 +8,7 @@
           </RouterLink>
           <div class="header__logo_cta">
             <h2 class="header__logo_title">Технологии комфорта</h2>
-            <div class="header__logo_descr">
-              Строительство качественных домов
-            </div>
+            <div class="header__logo_descr">Строительство качественных домов</div>
           </div>
         </div>
         <YandexStar />
@@ -33,10 +31,8 @@
           />
           <div class="header__work_time">
             <div class="header__date">Без выходных 9:00-18:00</div>
-            <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
-            ><a class="header__call_us" @click="openModal('form')"
-              >Заказать звонок</a
-            >
+            <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a>
+            <!-- <a class="header__call_us" @click="openModal('form')">Заказать звонок</a> -->
           </div>
         </div>
         <button
@@ -48,11 +44,20 @@
           <span></span>
         </button>
       </div>
-      <ul class="header__nav_list">
-        <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
-          <a :href="item.link">{{ item.name }}</a>
-        </li>
-      </ul>
+    </div>
+    <div class="header_bottom">
+      <div class="section_in">
+        <div class="header_bottom__main">
+          <div class="header_shop">
+            <RouterLink to="/shop">Каталог</RouterLink>
+          </div>
+          <ul class="header__nav_list">
+            <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
+              <a :href="item.link">{{ item.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -73,7 +78,8 @@ const socials = ref([
     link: "https://wtsp.cc/79282755456",
   },
   {
-    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
+    img:
+      "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
     link: "mailto:2klstk@mail.ru",
   },
 ]);
@@ -113,8 +119,17 @@ onUnmounted(() => {
     z-index: 2;
   }
 }
+
+.header_bottom {
+  background-color: #b2c593;
+}
 .header--scrolled {
   backdrop-filter: blur(0.5rem);
+  // transform: translateY(-10rem);
+
+  .header__nav_list {
+    // padding: 0;
+  }
 }
 
 .header__btn_calc {
@@ -152,8 +167,13 @@ onUnmounted(() => {
 }
 
 .header__nav_list {
-  font-size: 2rem;
-  padding: 1rem 0;
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  color: white;
+  justify-content: flex-start;
+  a {
+    color: inherit;
+  }
 }
 
 .header__logo {
@@ -223,6 +243,25 @@ onUnmounted(() => {
 .header__nav_list {
   @include bp($point_2) {
     display: none;
+  }
+}
+
+.header_bottom__main {
+  @include flex-start;
+  gap: 2rem;
+}
+
+.header_shop {
+  color: #fff;
+  background-color: #444;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  height: 100%;
+  a {
+    padding: 1.8rem 3rem;
+    color: inherit;
+    @include flex-center;
+    text-decoration: none;
   }
 }
 </style>

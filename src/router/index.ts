@@ -23,6 +23,36 @@ const router = createRouter({
       name: "privacy",
       component: () => import("../views/PolicyView.vue"),
     },
+    {
+      path: "/shop",
+
+      children: [
+        {
+          path: "",
+          name: "shop-list",
+          component: () => import("../views/Shop/ShopView.vue"),
+          meta: {
+            title: "Каталог проектов",
+          },
+        },
+        {
+          path: ":slug",
+          name: "shop-single",
+          component: () => import("../views/Shop/ShopSingle.vue"),
+          meta: {
+            title: "Детали проекта 1",
+          },
+        },
+        {
+          path: "category/:slug",
+          name: "shop-category",
+          component: () => import("../views/Shop/ShopViewCategory.vue"),
+          meta: {
+            title: "Детали проекта 1",
+          },
+        },
+      ],
+    },
   ],
 });
 

@@ -65,12 +65,11 @@
               Проектирование и изготовление металлических каркасов домов
             </div>
             <div class="system__info_about_descr">
-              Возведение каркаса здания из металлоконструкции, собранной из
-              оцинкованной стали, произведенного автоматической линией с
-              технологическими отверстиями и пазами. Каркас с обеих сторон
-              обшивается плитным материалом, который является несъемной
-              опалубкой, полости заполняются полистиролбетоном, который делает
-              конструкцию монолитной и теплой
+              Возведение каркаса здания из металлоконструкции, собранной из оцинкованной
+              стали, произведенного автоматической линией с технологическими отверстиями и
+              пазами. Каркас с обеих сторон обшивается плитным материалом, который
+              является несъемной опалубкой, полости заполняются полистиролбетоном, который
+              делает конструкцию монолитной и теплой
             </div>
             <div style="display: inline-flex">
               <btn
@@ -83,8 +82,8 @@
           <div class="system__info_about system__info_about--green">
             <div class="system__info_about_title">МСБК</div>
             <div class="system__info_about_descr">
-              Иновационная технология строительства жилых домов и коммерческих
-              зданий комфорт-класса
+              Иновационная технология строительства жилых домов и коммерческих зданий
+              комфорт-класса
             </div>
           </div>
         </div>
@@ -93,17 +92,13 @@
   </section>
   <section class="section adv">
     <div class="section_in adv__in">
-      <h2 class="adv__title">
-        <cap :num="5" />
-        <strong>ПРЕИМУЩЕСТВА ТЕХНОЛОГИИ </strong> «МСБК»
-      </h2>
+      <h2 class="adv__title"><strong>ПРЕИМУЩЕСТВА ТЕХНОЛОГИИ </strong> «МСБК»</h2>
       <div class="adv__info_row">
         <div class="adv__info">
-          По теплоизоляционным свойствам полистиролбетон значительно превосходит
-          кирпич и является лучшим среди легких бетонов. При заливке
-          полистиролбетона исключается возникновение мест с повышенным
-          теплообменом между наружным и внутренним контуром здания на протяжении
-          всего периода эксплуатации.
+          По теплоизоляционным свойствам полистиролбетон значительно превосходит кирпич и
+          является лучшим среди легких бетонов. При заливке полистиролбетона исключается
+          возникновение мест с повышенным теплообменом между наружным и внутренним
+          контуром здания на протяжении всего периода эксплуатации.
         </div>
         <ul class="adv__info_list">
           <li class="adv__info_item">Высокая скорость возведения</li>
@@ -119,20 +114,20 @@
       <div class="adv__about">
         <div class="adv__about_descr">
           <p>
-            Древесная омыленная смола (СДО), входящая в состав полистиролбетона,
-            подавляет рост патогенной микрофлоры (бактерий, грибов), т.е.
-            препятствует образованию плесени и гниению.
+            Древесная омыленная смола (СДО), входящая в состав полистиролбетона, подавляет
+            рост патогенной микрофлоры (бактерий, грибов), т.е. препятствует образованию
+            плесени и гниению.
           </p>
           <p>
-            Входящие в состав полистиролбетона компоненты безопасны для здоровья
-            и окружающей среды: вспененный полистирол используется для
-            изготовления упаковок для продуктов, одноразовой посуды,
-            детскихигрушек, одноразовых медицинских инструментов.
+            Входящие в состав полистиролбетона компоненты безопасны для здоровья и
+            окружающей среды: вспененный полистирол используется для изготовления упаковок
+            для продуктов, одноразовой посуды, детскихигрушек, одноразовых медицинских
+            инструментов.
           </p>
           <p>
-            Полистиролбетон в Двойном каркасе МСБК не препятствуютвоздухообмену,
-            т. е. стены способны «дышать», а благодаря высокой паропроницаемости
-            — регулировать влажность воздуха.
+            Полистиролбетон в Двойном каркасе МСБК не препятствуютвоздухообмену, т. е.
+            стены способны «дышать», а благодаря высокой паропроницаемости — регулировать
+            влажность воздуха.
           </p>
         </div>
         <div class="adv__img_w">
@@ -148,46 +143,41 @@
             Долговечность свыше 100 лет и сейсмостойкость до 9 баллов
           </div>
           <div class="adv__adv_descr">
-            обеспечат капитальный свайно-ростверковый фундамент и монолитная
-            сталебетонная стена
+            обеспечат капитальный свайно-ростверковый фундамент и монолитная сталебетонная
+            стена
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">
-            Экономия на отоплении и комфортный микроклимат
-          </div>
+          <div class="adv__adv_title">Экономия на отоплении и комфортный микроклимат</div>
           <div class="adv__adv_descr">
-            благодаря высокой энергоэффективности строения, заполненного
-            теплоизолирующего и шумоизолирующего материала полистиролбетона
+            благодаря высокой энергоэффективности строения, заполненного теплоизолирующего
+            и шумоизолирующего материала полистиролбетона
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Безопасность</div>
           <div class="adv__adv_descr">
-            все материалы, использующиеся для строительства каркасно-монолитных
-            домов, имеют высокий уровень пожарной и экологической безопасности
+            все материалы, использующиеся для строительства каркасно-монолитных домов,
+            имеют высокий уровень пожарной и экологической безопасности
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Внешний вид на любой вкус</div>
           <div class="adv__adv_descr">
-            от суперсовременного навесного фасада до классической кирпичной
-            кладки с возможностью полного обновления фасада в процессе
-            эксплуатации
+            от суперсовременного навесного фасада до классической кирпичной кладки с
+            возможностью полного обновления фасада в процессе эксплуатации
           </div>
         </li>
         <li class="adv__adv_item">
           <div class="adv__adv_title">Срок строительства дома</div>
           <div class="adv__adv_descr">
-            от 60 дней – это инновационный подход к возведению жилья, который
-            сочетает в себе современные технологии и стандартные строительные
-            процедуры. Сокращает время без ущерба для качества.
+            от 60 дней – это инновационный подход к возведению жилья, который сочетает в
+            себе современные технологии и стандартные строительные процедуры. Сокращает
+            время без ущерба для качества.
           </div>
         </li>
         <li class="adv__adv_item">
-          <div class="adv__adv_title">
-            Экономия времени и денег на ремонт и отделку
-          </div>
+          <div class="adv__adv_title">Экономия времени и денег на ремонт и отделку</div>
           <div class="adv__adv_descr">
             безусадочная технология позволит приступить к отделке сразу же после
             возведения коробки дома, технология обеспечит идеально ровные углы и
@@ -202,7 +192,6 @@
   <section class="section imagine">
     <div class="section_in imagine__in">
       <h2 class="imagine__title">
-        <!-- <cap :num="5" /> -->
         <strong>Представьте, как уже завтра</strong> <br />
         вы просыпаетесь в доме вашей мечты
       </h2>
@@ -215,13 +204,10 @@
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">
-              Создавайте тёплые воспоминания
-            </div>
+            <div class="imagine__item_title">Создавайте тёплые воспоминания</div>
             <div class="imagine__item_descr">
-              Проводите уютные вечера с семьёй: украшайте ёлку, готовьте
-              праздничные угощения, наслаждайтесь горячим шоколадом у камина и
-              делитесь радостью!
+              Проводите уютные вечера с семьёй: украшайте ёлку, готовьте праздничные
+              угощения, наслаждайтесь горячим шоколадом у камина и делитесь радостью!
             </div>
           </div>
         </li>
@@ -235,9 +221,9 @@
           <div class="imagine__info">
             <div class="imagine__item_title">Наслаждайтесь зимними видами</div>
             <div class="imagine__item_descr">
-              Проводите время активно: гуляйте на свежем воздухе, катайтесь на
-              лыжах, стройте снежные крепости или просто наслаждайтесь уютом у
-              камина после прогулки!
+              Проводите время активно: гуляйте на свежем воздухе, катайтесь на лыжах,
+              стройте снежные крепости или просто наслаждайтесь уютом у камина после
+              прогулки!
             </div>
           </div>
         </li>
@@ -249,13 +235,11 @@
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">
-              Создайте сказку для ваших детей
-            </div>
+            <div class="imagine__item_title">Создайте сказку для ваших детей</div>
             <div class="imagine__item_descr">
-              Подарите волшебство: украсьте дом гирляндами, загадайте желания с
-              Дедом Морозом, откройте подарки под ёлкой и наслаждайтесь
-              искренними улыбками ваших детей!
+              Подарите волшебство: украсьте дом гирляндами, загадайте желания с Дедом
+              Морозом, откройте подарки под ёлкой и наслаждайтесь искренними улыбками
+              ваших детей!
             </div>
           </div>
         </li>
@@ -266,21 +250,14 @@
           size="large"
           style="display: inline-flex"
           @click.stop="openModal('sale')"
-          :caps="5"
         />
       </div>
     </div>
   </section>
-  <SystemsSlider
-    :systems="home?.acf.case_list"
-    :title="home?.acf?.case_title"
-  />
+  <SystemsSlider :systems="home?.acf.case_list" :title="home?.acf?.case_title" />
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
-      <h2 class="step__title">
-        <!-- <cap :num="5" /> -->
-        Как мы <strong> работаем</strong>
-      </h2>
+      <h2 class="step__title">Как мы <strong> работаем</strong></h2>
       <div class="step__list_w">
         <Swiper
           :slides-per-view="4"
@@ -300,10 +277,7 @@
             320: { slidesPerView: 1.2, spaceBetween: 10 },
           }"
         >
-          <SwiperSlide
-            v-for="(item, i) in steps"
-            :key="'works-item-slide-' + item.id"
-          >
+          <SwiperSlide v-for="(item, i) in steps" :key="'works-item-slide-' + item.id">
             <li class="step__card">
               <div class="step__card_info">
                 <div class="step__card_title">{{ item.title }}</div>
@@ -334,9 +308,7 @@
   <section class="section stage js-sys-slider-w" id="steps">
     <div class="section_in stage__in">
       <h2 class="stage__title">
-        <!-- <cap :num="5" /> -->
-        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный
-        дом
+        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный дом
       </h2>
       <div class="sys_slider__pag js-sys-pag-w"></div>
       <div class="stage__slider_w">
@@ -361,10 +333,7 @@
                       </div>
                       <div class="stage__info_subtitle">Включено:</div>
                       <ul class="stage__info_list">
-                        <li
-                          class="stage__info_item"
-                          v-for="subitem in item.list"
-                        >
+                        <li class="stage__info_item" v-for="subitem in item.list">
                           <span class="stage__info_item_icon">
                             <svg class="icon icon_checked icon--size_mod">
                               <use
@@ -389,8 +358,7 @@
                             <use
                               xlink:href="@/assets/images/sprite/sprite.svg#rub"
                             ></use></svg></span
-                        ><span>Стоимость: </span
-                        ><strong> {{ item.price }}</strong>
+                        ><span>Стоимость: </span><strong> {{ item.price }}</strong>
                       </div>
                     </div>
                   </div>
@@ -430,17 +398,14 @@
         <div class="excursion__col excursion__col--info">
           <div class="excursion__info_in">
             <h2 class="excursion__title">
-              <!-- <cap :num="5" /> -->
-              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся
-              объектам
+              Приглашаем на <strong>бесплатную экскурсию</strong> по строящимся объектам
             </h2>
             <div class="excursion__subtitle">
               Поговорите с нашими строителями, узнайте больше о процессе
             </div>
             <ul class="excursion__list">
               <li class="excursion__item">
-                <strong>Исследуйте</strong> используемые технологии
-                строительства
+                <strong>Исследуйте</strong> используемые технологии строительства
               </li>
               <li class="excursion__item">
                 <strong>Оцените</strong> качество стройматериалов
@@ -467,7 +432,6 @@
   <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">
-        <!-- <cap :num="5" /> -->
         Что о нас говорят <strong data-v-b4e148ca="">довольные клиенты</strong>
       </h2>
       <div class="step__list js-step-slider js-step-slider--review">
@@ -487,10 +451,7 @@
             nextEl: '.js-review-navigation-next',
           }"
         >
-          <SwiperSlide
-            v-for="(item, i) in home?.acf.rev"
-            :key="'reviews-home-' + i"
-          >
+          <SwiperSlide v-for="(item, i) in home?.acf.rev" :key="'reviews-home-' + i">
             <li class="step__card">
               <div class="step__rev_info">
                 <div class="step__rev_heading">
@@ -510,12 +471,9 @@
                 <div class="step__rev_descr">
                   {{ item.txt }}
                 </div>
-                <a
-                  class="step__rev_link"
-                  :href="item.link.url"
-                  target="_blank"
-                  >{{ item.link.title }}</a
-                >
+                <a class="step__rev_link" :href="item.link.url" target="_blank">{{
+                  item.link.title
+                }}</a>
               </div>
             </li>
           </SwiperSlide>
@@ -544,7 +502,6 @@
   <section class="section step js-step-slider-w step--stage-mod">
     <div class="section_in step__in">
       <h2 class="step__title">
-        <!-- <cap :num="5" /> -->
         Чтобы быть спокойным и уверенным в качественном доме -<strong
           >вам нужен надежный подрядчик</strong
         >
@@ -572,9 +529,7 @@
           <SwiperSlide>
             <li class="step__card">
               <div class="step__card_info">
-                <div class="step__card_title" data-num="1">
-                  Помощь в подборе участка
-                </div>
+                <div class="step__card_title" data-num="1">Помощь в подборе участка</div>
               </div>
             </li>
           </SwiperSlide>
@@ -657,7 +612,6 @@
               style="justify-content: center"
               name="Заказать звонок"
               size="large"
-              :caps="5"
               @click="openModal('form')"
             />
           </div>
@@ -699,7 +653,6 @@
 </template>
 
 <script setup lang="ts">
-import cap from "@/components/ui/cap.vue";
 import PromoBanner from "@/components/promo/PromoBanner.vue";
 import { onMounted, ref } from "vue";
 import { gsap } from "gsap";

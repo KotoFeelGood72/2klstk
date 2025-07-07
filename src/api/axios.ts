@@ -6,5 +6,8 @@ const api = axios.create({
       ? "https://2klstk.ru/wp-content/uploads/json/"
       : "/api/",
 });
+const apiOr = axios.create({
+  baseURL: "https://2klstk.ru/wp-json/wp/v2",
+});
 
-export { api };
+export { api, apiOr };

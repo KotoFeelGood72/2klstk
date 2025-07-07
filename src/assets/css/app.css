@@ -557,10 +557,11 @@ input[type="submit"] {
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
   gap: 3rem;
+  padding: 1.5rem 0;
 }
-.header__row:last-child {
+/* .header__row:last-child {
   margin-top: 2rem;
-}
+} */
 .header__nav_list {
   color: #444;
   font-size: 2.5rem;
@@ -568,23 +569,23 @@ input[type="submit"] {
   line-height: 1;
 }
 .header__nav_list a {
-  color: #444;
+  /* color: #444; */
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.header__nav_list a:hover {
+/* .header__nav_list a:hover {
   color: #000;
-}
+} */
 .header__nav_list li > a {
   cursor: pointer;
   display: block;
-  padding: 1rem;
+  /* padding: 1rem; */
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .header__nav_list li > a:hover {
-  color: #b2c593;
+  /* color: #b2c593; */
 }
 .body--open_menu_state .header__nav {
   opacity: 1;
@@ -784,7 +785,7 @@ input[type="submit"] {
   font-weight: 300;
 }
 .header__date {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 .header__row--mobile .header__date {
@@ -1060,12 +1061,12 @@ input[type="submit"] {
   justify-content: flex-start;
 }
 .footer .menu-item a {
-  color: #444;
+  /* color: #444; */
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .footer .menu-item a:hover {
-  color: #b2c593;
+  /* color: #b2c593; */
   text-decoration: none;
 }
 .footer__rights_row {
@@ -3614,7 +3615,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 @media screen and (min-width: 1200px) {
   :root {
-    --height-header: 16.6rem;
+    --height-header: 14.8rem;
   }
   .header__nav_list {
     -webkit-box-orient: horizontal;
@@ -4325,9 +4326,9 @@ input:checked ~ .calc__slide_item_icon {
   .popup_call__form_item--file .popup_call__file_label {
     font-size: 2rem;
   }
-  .header {
-    padding: 2rem;
-  }
+  /* .header {
+    padding: 1rem 0;
+  } */
   .header__logo_row {
     margin-right: 1.5rem;
   }
@@ -4339,7 +4340,7 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2rem;
   }
   .header__phone {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .header__call_us {
     font-size: 2rem;

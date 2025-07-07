@@ -1,9 +1,10 @@
 import { defineStore, storeToRefs } from "pinia";
-import { api } from "@/api/axios";
+import { api, apiOr } from "@/api/axios";
 
 export const useProjectsStore = defineStore("projects", {
   state: () => ({
     projects: null as any,
+    categories: null as any,
     sendObject: {
       image: null as string | null,
       title: null as string | null,
@@ -18,6 +19,21 @@ export const useProjectsStore = defineStore("projects", {
         this.addIconNamesToCharacters(); // Вызываем метод для добавления иконок
       } catch (error) {
         console.error("Ошибка при получении проектов:", error);
+      }
+    },
+    async fetchProjectsByCategorySlug(id: any) {
+      const { data } = await apiOr.get(
+        `/projects?project_cat=${id}&per_page=100`
+      );
+      return data;
+    },
+
+    async getCategories() {
+      try {
+        const { data } = await apiOr.get("/project_cat?per_page=100");
+        this.categories = data;
+      } catch (error) {
+        console.error("Ошибка при получении категорий:", error);
       }
     },
     getProjectById(id: any) {

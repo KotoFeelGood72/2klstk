@@ -2,9 +2,7 @@
   <section class="section calc js-step-form-w">
     <div class="section_in calc__in">
       <h2 class="calc__title">
-        <!-- <cap :num="5" /> -->
-        <strong>Получите предварительный расчет стоимости </strong> дома за 1
-        минуту
+        <strong>Получите предварительный расчет стоимости </strong> дома за 1 минуту
       </h2>
       <div class="calc__form">
         <div class="calc__form_row">
@@ -33,7 +31,6 @@
 </template>
 
 <script setup lang="ts">
-import cap from "./ui/cap.vue";
 import QuizAbout from "@/components/quiz/QuizAbout.vue";
 import QuizSlides from "@/components/quiz/QuizSlides.vue";
 import { computed } from "vue";
@@ -41,9 +38,7 @@ import { useQuizStoreRefs } from "@/stores/useQuizStore";
 const { currentStep, steps } = useQuizStoreRefs();
 const totalSteps = computed(() => steps.value.length);
 
-const progressWidth = computed(
-  () => (currentStep.value / totalSteps.value) * 100
-);
+const progressWidth = computed(() => (currentStep.value / totalSteps.value) * 100);
 
 const progressWidthRounded = computed(() => progressWidth.value.toFixed(0));
 </script>

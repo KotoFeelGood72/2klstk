@@ -45,7 +45,7 @@
       <div class="section_in">
         <div class="header_bottom__main">
           <div class="header_shop">
-            <RouterLink to="/shop">Каталог</RouterLink>
+            <RouterLink to="/shop">Проекты и цены</RouterLink>
           </div>
           <ul class="header__nav_list">
             <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
@@ -81,7 +81,7 @@ const socials = ref([
 ]);
 
 const menu = ref([
-  { name: "Проекты и цены", link: "/#projects" },
+  { name: "Новости", link: "/news" },
   { name: "Этапы строительства", link: "/#steps" },
   { name: "О компании", link: "/#about" },
   { name: "Контакты", link: "/#contacts" },

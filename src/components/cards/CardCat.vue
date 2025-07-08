@@ -1,6 +1,6 @@
 <template>
   <div class="cat">
-    <RouterLink :to="`shop/category/${cat.slug}?cat_id=${cat.id}`">
+    <RouterLink :to="dynamicPath">
       <div class="cat_img">
         <img :src="cat.acf.img" />
       </div>
@@ -13,9 +13,26 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+const props = defineProps<{
   cat: any;
 }>();
+
+const route = useRoute();
+
+console.log(route);
+
+const dynamicPath = computed(() => {
+  if (route.name === "shop-list" || route.name === "shop-category") {
+    return `/shop/category/${props.cat.slug}?cat_id=${props.cat.id}`;
+  }
+  if (route.name === "news-list" || route.name === "news-category") {
+    return `/news/category/${props.cat.slug}?cat_id=${props.cat.id}`;
+  }
+  // fallback
+  return `/category/${props.cat.slug}?cat_id=${props.cat.id}`;
+});
 </script>
 
 <style scoped lang="scss">

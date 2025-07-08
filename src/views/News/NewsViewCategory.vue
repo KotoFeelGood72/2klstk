@@ -2,19 +2,11 @@
   <div class="shop">
     <div class="section_in">
       <div class="shop_head">
-        <h1>Каталог проектов строительства домов</h1>
-        <p>
-          Готовые разработки домов, пользующихся заслуженной популярностью — отличный
-          способ быстро определиться с архитектурой строения, без лишних вложений на
-          эксклюзивное проектирование.
-        </p>
+        <h1>{{ news?.category?.name }}</h1>
+        <p>{{ news?.category?.description }}</p>
       </div>
       <div class="shop_grid">
-        <CardProject
-          v-for="(item, i) in projects"
-          :project="item"
-          :key="'projects-item-' + i"
-        />
+        <CardNews v-for="(item, i) in news" :news="item" :key="'news-item-' + i" />
       </div>
     </div>
   </div>
@@ -22,18 +14,19 @@
 
 <script setup lang="ts">
 import { useProjectsStore } from "@/stores/useProjectStore";
-import CardProject from "@/components/cards/CardProject.vue";
+import CardNews from "@/components/cards/CardNews.vue";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
+import { useNewsStore } from "@/stores/useNewsStore";
 
-const { fetchProjectsByCategorySlug } = useProjectsStore();
+const { fetchPostsByCategoryId } = useNewsStore();
 
 const route = useRoute();
 
-const projects = ref<any>();
+const news = ref<any>();
 
 onMounted(async () => {
-  projects.value = await fetchProjectsByCategorySlug(route.query.cat_id);
+  news.value = await fetchPostsByCategoryId(route.query.cat_id);
 });
 </script>
 

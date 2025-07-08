@@ -2,7 +2,7 @@
   <div class="shop">
     <div class="section_in">
       <div class="shop_head">
-        <h1>Каталог проектов строительства домов</h1>
+        <h1>Новости</h1>
         <p>
           Готовые разработки домов, пользующихся заслуженной популярностью — отличный
           способ быстро определиться с архитектурой строения, без лишних вложений на
@@ -52,11 +52,11 @@
 
 <script setup lang="ts">
 import CardCat from "@/components/cards/CardCat.vue";
-import { useProjectsStore, useProjectsStoreRefs } from "@/stores/useProjectStore";
+import { useNewsStore, useNewsStoreRefs } from "@/stores/useNewsStore";
 import { onMounted } from "vue";
 
-const { getCategories } = useProjectsStore();
-const { categories } = useProjectsStoreRefs();
+const { getCategories } = useNewsStore();
+const { categories } = useNewsStoreRefs();
 
 onMounted(async () => {
   await getCategories();

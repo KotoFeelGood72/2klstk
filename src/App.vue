@@ -7,9 +7,9 @@
     <transition name="fade-bg">
       <Preloader />
     </transition>
-    <transition name="slide-up">
+    <!-- <transition name="slide-up">
       <ModalCallback v-if="modals.form" />
-    </transition>
+    </transition> -->
     <transition name="slide-up">
       <ModalObject v-if="modals.project" />
     </transition>
@@ -43,7 +43,7 @@ const { modals } = useModalStoreRefs();
 
 const { allCloserModal } = useCloserModal();
 
-let isModalShownByScroll = false; // Флаг для отслеживания показа модального окна при скролле
+// let isModalShownByScroll = false; // Флаг для отслеживания показа модального окна при скролле
 
 // Определяем, какой layout использовать
 const route = useRoute();
@@ -81,57 +81,57 @@ watch(isModalActive, (newValue) => {
 });
 
 // Функция для открытия модального окна при скролле
-const handleScroll = () => {
-  if (!isModalActive.value && !isModalShownByScroll) {
-    // Проверяем, нет ли активных модальных окон и не была ли модалка показана ранее
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const pageHeight = document.documentElement.scrollHeight;
+// const handleScroll = () => {
+//   if (!isModalActive.value && !isModalShownByScroll) {
+//     // Проверяем, нет ли активных модальных окон и не была ли модалка показана ранее
+//     const scrollPosition = window.scrollY + window.innerHeight;
+//     const pageHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition / pageHeight >= 0.9) {
-      openModal("form");
-      isModalShownByScroll = true; // После показа модалки устанавливаем флаг в true
-    }
-  }
-};
+//     if (scrollPosition / pageHeight >= 0.9) {
+//       openModal("form");
+//       isModalShownByScroll = true; // После показа модалки устанавливаем флаг в true
+//     }
+//   }
+// };
 
-let inactivityTimer: ReturnType<typeof setTimeout>;
+// let inactivityTimer: ReturnType<typeof setTimeout>;
 
-// Функция для сброса таймера бездействия
-const resetInactivityTimer = () => {
-  clearTimeout(inactivityTimer);
-  if (!isModalActive.value) {
-    // Проверяем, нет ли активных модальных окон
-    inactivityTimer = setTimeout(() => {
-      openModal("form");
-    }, 120000); // 60 секунд бездействия
-  }
-};
+// // Функция для сброса таймера бездействия
+// const resetInactivityTimer = () => {
+//   clearTimeout(inactivityTimer);
+//   if (!isModalActive.value) {
+//     // Проверяем, нет ли активных модальных окон
+//     inactivityTimer = setTimeout(() => {
+//       openModal("form");
+//     }, 120000); // 60 секунд бездействия
+//   }
+// };
 
 // Добавляем слушатели для отслеживания активности пользователя
-const addInactivityListeners = () => {
-  window.addEventListener("mousemove", resetInactivityTimer);
-  window.addEventListener("keydown", resetInactivityTimer);
-  window.addEventListener("scroll", resetInactivityTimer);
-};
+// const addInactivityListeners = () => {
+//   window.addEventListener("mousemove", resetInactivityTimer);
+//   window.addEventListener("keydown", resetInactivityTimer);
+//   window.addEventListener("scroll", resetInactivityTimer);
+// };
 
 // Убираем слушатели активности
 const removeInactivityListeners = () => {
-  window.removeEventListener("mousemove", resetInactivityTimer);
-  window.removeEventListener("keydown", resetInactivityTimer);
-  window.removeEventListener("scroll", resetInactivityTimer);
+  // window.removeEventListener("mousemove", resetInactivityTimer);
+  // window.removeEventListener("keydown", resetInactivityTimer);
+  // window.removeEventListener("scroll", resetInactivityTimer);
 };
 
 // Обработчики событий при монтировании и размонтировании компонента
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-  resetInactivityTimer();
-  addInactivityListeners();
+  // window.addEventListener("scroll", handleScroll);
+  // resetInactivityTimer();
+  // addInactivityListeners();
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-  removeInactivityListeners();
-  clearTimeout(inactivityTimer);
+  // window.removeEventListener("scroll", handleScroll);
+  // removeInactivityListeners();
+  // clearTimeout(inactivityTimer);
 });
 </script>
 

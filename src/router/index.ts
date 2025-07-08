@@ -53,6 +53,36 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: "/news",
+
+      children: [
+        {
+          path: "",
+          name: "news-list",
+          component: () => import("../views/News/NewsView.vue"),
+          meta: {
+            title: "Каталог проектов",
+          },
+        },
+        {
+          path: ":slug",
+          name: "news-single",
+          component: () => import("../views/News/NewsSingle.vue"),
+          meta: {
+            title: "Детали проекта 1",
+          },
+        },
+        {
+          path: "category/:slug",
+          name: "news-category",
+          component: () => import("../views/News/NewsViewCategory.vue"),
+          meta: {
+            title: "Детали проекта 1",
+          },
+        },
+      ],
+    },
   ],
 });
 

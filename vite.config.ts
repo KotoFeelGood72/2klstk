@@ -56,6 +56,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+      "/url": {
+        target: "https://2klstk.ru/wp-json/wp/v2",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/url/, ""),
+      },
+      "/custom": {
+        target: "https://2klstk.ru/wp-json/custom/v1",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/custom/, ""),
+      },
     },
   },
 });

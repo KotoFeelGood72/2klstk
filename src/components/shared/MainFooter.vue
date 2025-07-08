@@ -5,15 +5,11 @@
         <div class="footer__col footer__col--logo">
           <div class="footer__logo_row">
             <RouterLink class="footer__logo" to="/">
-              <img
-                src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png"
-              />
+              <img src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png" />
             </RouterLink>
             <div class="footer__logo_cta">
               <h2 class="footer__logo_title">Технологии комфорта</h2>
-              <div class="footer__logo_descr">
-                Строительство качественных домов
-              </div>
+              <div class="footer__logo_descr">Строительство качественных домов</div>
             </div>
           </div>
           <div class="footer__row_icon">
@@ -30,18 +26,14 @@
         <div class="footer__col footer__col--info">
           <div class="footer__date">Без выходных 9:00-18:00</div>
           <a class="footer__phone" href="tel:+79282755456">+7 928 275-54-56</a
-          ><a class="footer__call_us" @click="openModal('form')"
-            >Заказать звонок</a
-          >
+          ><a class="footer__call_us" @click="openModal('form')">Заказать звонок</a>
           <ul class="footer__social_list">
             <li
               class="footer__social_item"
               v-for="(item, i) in socials"
               :key="'footer-social-item' + i"
             >
-              <a class="footer__social_link" :href="item.link"
-                ><img :src="item.img"
-              /></a>
+              <a class="footer__social_link" :href="item.link"><img :src="item.img" /></a>
             </li>
           </ul>
         </div>
@@ -65,18 +57,6 @@
 
               <div class="footer__inn">ИНН 2311188415</div>
             </div>
-            <!-- <div class="footer__studio_logo_w">
-              <div class="footer__studio_img_w">
-                <img
-                  class="footer__studio_img"
-                  src="@/assets/images/footer-studio.svg"
-                />
-              </div>
-              <div class="footer__studio_logo_title">
-                Разработчик <br />
-                <strong>Happines</strong>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -85,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 import { useModalStore } from "@/stores/useModalStore";
 
 const { openModal } = useModalStore();
@@ -99,7 +79,8 @@ const socials = ref([
     link: "https://wtsp.cc/79282755456",
   },
   {
-    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
+    img:
+      "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
     link: "mailto:2klstk@mail.ru",
   },
 ]);
@@ -113,4 +94,10 @@ const menu = ref([
 ]);
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.footer__nav_list {
+  a {
+    color: $dark;
+  }
+}
+</style>

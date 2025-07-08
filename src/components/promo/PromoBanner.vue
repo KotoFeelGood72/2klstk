@@ -8,8 +8,8 @@
             <span>"Технологии Комфорта"</span>
           </h1>
           <p class="banner_subtitle">
-            Зафиксируйте цену строительства до <span>28.12.2024</span> Начните
-            новый год с мечты о собственном уютном доме!
+            Зафиксируйте цену строительства до <span>28.12.2024</span> Начните новый год с
+            мечты о собственном уютном доме!
           </p>
           <div class="banner_timer">
             <div class="timer_item">
@@ -33,7 +33,6 @@
             name="Зафиксировать цену"
             theme="blue"
             size="large"
-            :caps="5"
             @click="openModal('sale')"
           />
         </div>
@@ -41,9 +40,7 @@
           <img src="http://2klstk.ru/wp-content/uploads/2024/11/i.webp" />
         </div>
         <div class="sale-img">
-          <img
-            src="http://2klstk.ru/wp-content/uploads/2024/11/house-model-1.png"
-          />
+          <img src="http://2klstk.ru/wp-content/uploads/2024/11/house-model-1.png" />
         </div>
       </div>
     </div>

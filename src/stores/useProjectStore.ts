@@ -1,5 +1,5 @@
 import { defineStore, storeToRefs } from "pinia";
-import { api, apiOr } from "@/api/axios";
+import { api, apiOr, url, custom } from "@/api/axios";
 
 export const useProjectsStore = defineStore("projects", {
   state: () => ({
@@ -41,6 +41,24 @@ export const useProjectsStore = defineStore("projects", {
         return this.projects.find((project: any) => project.id === id);
       }
       return null;
+    },
+    async fetchProjectBySlug(slug: any) {
+      try {
+        const response = await url.get(
+          `https://2klstk.ru/wp-json/wp/v2/projects?slug=${slug}`
+        );
+        return response.data[0];
+      } catch (err) {}
+    },
+
+    async fetchRandomProjects(count: number = 4) {
+      try {
+        const { data } = await custom.get(`/random-projects?count=${count}`);
+        return data;
+      } catch (error) {
+        console.error("Ошибка при получении случайных проектов:", error);
+        return [];
+      }
     },
     addIconNamesToCharacters() {
       if (this.projects && Array.isArray(this.projects)) {

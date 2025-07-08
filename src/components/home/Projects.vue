@@ -4,7 +4,12 @@
       <h2 class="popular__title"><strong>Популярные проекты</strong> и цены</h2>
       <div class="popular__list_w">
         <div class="popular__list">
-          <div
+          <CardProject
+            v-for="(item, i) in visibleProjects"
+            :key="'popular-projects-item' + i"
+            :project="item"
+          />
+          <!-- <div
             class="popular__card"
             v-for="(item, i) in visibleProjects"
             :key="'popular-projects-item' + i"
@@ -46,22 +51,22 @@
                     name="Подробнее"
                     size="medium"
                     @click.stop="opeModalProject(item.id)"
-                    :caps="5"
                   />
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="projects__bottom">
+          <!-- v-if="visibleProjects.length < projects.length" -->
           <btn
-            name="Показать еще"
+            name="Смотреть все"
             size="large"
-            v-if="visibleProjects.length < projects.length"
             class="btn_base_s"
-            @click="loadMore"
+            @click="router.push('/shop')"
           />
+          <!-- @click="loadMore" -->
         </div>
       </div>
     </div>
@@ -74,6 +79,7 @@ import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useModalStore } from "@/stores/useModalStore";
 import { useProjectsStore, useProjectsStoreRefs } from "@/stores/useProjectStore";
+import CardProject from "../cards/CardProject.vue";
 
 const { openModal, closeModal } = useModalStore();
 const { getProjects } = useProjectsStore();

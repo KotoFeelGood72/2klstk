@@ -7829,3 +7829,7 @@ html.with-fancybox body.hide-scrollbar {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+a:hover {
+  text-decoration: none;
+}

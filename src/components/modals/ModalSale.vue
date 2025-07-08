@@ -21,9 +21,7 @@
             <div class="popup_call__form_list">
               <div class="popup_call__form_item">
                 <div class="form_input">
-                  <label class="form_input__label" for="input_10"
-                    >Введите имя</label
-                  >
+                  <label class="form_input__label" for="input_10">Введите имя</label>
                   <div class="form_input__field">
                     <input
                       class="form_input__element"
@@ -52,10 +50,7 @@
                       @blur="v$.phone.$touch"
                       @input="handlePhoneInput"
                       @keypress="blockInvalidInput"
-                      :class="[
-                        { error: v$.phone.$error },
-                        'form_input__element',
-                      ]"
+                      :class="[{ error: v$.phone.$error }, 'form_input__element']"
                       mask="+7 (###) ###-##-##"
                     />
                     <div v-if="v$.phone.$error" class="error-message">
@@ -74,12 +69,7 @@
                 @drop.prevent="onDrop"
                 :class="{ 'file-dragging': isDragging }"
               >
-                <input
-                  type="file"
-                  ref="fileInput"
-                  @change="onFileChange"
-                  hidden
-                />
+                <input type="file" ref="fileInput" @change="onFileChange" hidden />
                 <label for=""
                   >Перетащите файл сюда или
                   <span @click="triggerFileInput">выберите файл</span></label
@@ -101,7 +91,6 @@
 
               <div class="popup_call__form_item">
                 <btn
-                  :caps="5"
                   @click="submitForm"
                   name="Получить консультацию"
                   size="large"
@@ -144,8 +133,7 @@ const fileInput = ref<HTMLInputElement | null>(null);
 const files = reactive<{ file: File | null }>({ file: null });
 const filePreviewUrl = ref<any>(null);
 
-const { phoneValidator, blockInvalidInput, handlePhoneInput } =
-  usePhoneValidation();
+const { phoneValidator, blockInvalidInput, handlePhoneInput } = usePhoneValidation();
 const {
   sendFormWithoutFile,
   sendFormWithFile,
@@ -189,11 +177,7 @@ const submitForm = async () => {
       closeAllModals();
     } catch (error: any) {
       // Выводим более подробную информацию об ошибке
-      console.error(
-        "Ошибка при отправке данных:",
-        error?.message || error,
-        error
-      );
+      console.error("Ошибка при отправке данных:", error?.message || error, error);
     }
   }
 };

@@ -72,11 +72,7 @@
               делает конструкцию монолитной и теплой
             </div>
             <div style="display: inline-flex">
-              <btn
-                @click.prevent="openModal('form')"
-                name="Получить консультацию"
-                :caps="5"
-              />
+              <btn @click.prevent="openModal('form')" name="Получить консультацию" />
             </div>
           </div>
           <div class="system__info_about system__info_about--green">
@@ -188,7 +184,7 @@
     </div>
   </section>
   <Projects />
-  <PromoBanner />
+  <!-- <PromoBanner /> -->
   <section class="section imagine">
     <div class="section_in imagine__in">
       <h2 class="imagine__title">
@@ -200,50 +196,54 @@
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="http://2klstk.ru/wp-content/uploads/2024/11/scale_1200.png"
+              src="http://2klstk.ru/wp-content/uploads/2025/07/chatgpt-image-8-iyul.-2025-g.-16_20_41.png"
+              alt="Семейный вечер на террасе"
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">Создавайте тёплые воспоминания</div>
+            <div class="imagine__item_title">Тёплые вечера на собственной террасе</div>
             <div class="imagine__item_descr">
-              Проводите уютные вечера с семьёй: украшайте ёлку, готовьте праздничные
-              угощения, наслаждайтесь горячим шоколадом у камина и делитесь радостью!
+              Наслаждайтесь барбекю, ароматом цветов и разговорами до поздней ночи под
+              звёздным небом в кругу семьи.
             </div>
           </div>
         </li>
+
         <li class="imagine__item">
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="http://2klstk.ru/wp-content/uploads/2024/11/winterhome-1500x1125-1.png"
+              src="http://2klstk.ru/wp-content/uploads/2025/07/chatgpt-image-8-iyul.-2025-g.-16_17_59.png"
+              alt="Вид на летний участок"
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">Наслаждайтесь зимними видами</div>
+            <div class="imagine__item_title">Живописный участок и собственный сад</div>
             <div class="imagine__item_descr">
-              Проводите время активно: гуляйте на свежем воздухе, катайтесь на лыжах,
-              стройте снежные крепости или просто наслаждайтесь уютом у камина после
-              прогулки!
+              Выращивайте фрукты и овощи, ухаживайте за цветами и отдыхайте в тени
+              деревьев рядом со своим домом в Краснодаре.
             </div>
           </div>
         </li>
+
         <li class="imagine__item">
           <div class="imagine__img_w">
             <img
               class="imagine__img"
-              src="http://2klstk.ru/wp-content/uploads/2024/11/006cd37c-2dab-528f-a973-6fcf164e4a9d.png"
+              src="http://2klstk.ru/wp-content/uploads/2025/07/chatgpt-image-8-iyul.-2025-g.-16_23_34.png"
+              alt="Дети играют во дворе"
             />
           </div>
           <div class="imagine__info">
-            <div class="imagine__item_title">Создайте сказку для ваших детей</div>
+            <div class="imagine__item_title">Безопасное детство на свежем воздухе</div>
             <div class="imagine__item_descr">
-              Подарите волшебство: украсьте дом гирляндами, загадайте желания с Дедом
-              Морозом, откройте подарки под ёлкой и наслаждайтесь искренними улыбками
-              ваших детей!
+              Постройте дом, где дети будут играть во дворе, кататься на велосипедах и
+              проводить лето с пользой и радостью.
             </div>
           </div>
         </li>
       </ul>
+
       <div class="btn-bottom" style="text-align: center">
         <btn
           name="Зафиксировать цену"
@@ -255,7 +255,8 @@
     </div>
   </section>
   <SystemsSlider :systems="home?.acf.case_list" :title="home?.acf?.case_title" />
-  <section class="section step js-step-slider-w">
+  <BlockSteps />
+  <!-- <section class="section step js-step-slider-w">
     <div class="section_in step__in">
       <h2 class="step__title">Как мы <strong> работаем</strong></h2>
       <div class="step__list_w">
@@ -304,7 +305,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="section stage js-sys-slider-w" id="steps">
     <div class="section_in stage__in">
       <h2 class="stage__title">
@@ -653,6 +654,7 @@
 </template>
 
 <script setup lang="ts">
+import BlockSteps from "@/components/blocks/BlockSteps.vue";
 import PromoBanner from "@/components/promo/PromoBanner.vue";
 import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
@@ -672,24 +674,6 @@ gsap.registerPlugin(ScrollTrigger);
 const { getHome } = useHomeStore();
 const { home } = useHomeStoreRefs();
 const { openModal } = useModalStore();
-const steps = ref<any>([
-  {
-    title: "Дом за 3 месяца",
-    txt: "Ваш дом будет готов без необходимости в доработках и покраске",
-  },
-  {
-    title: "Поэтапная оплата",
-    txt: "Платите только после проверки завершенного этапа",
-  },
-  {
-    title: "Штатные проектировщики",
-    txt: "Работаем с нуля или дорабатываем проект по вашему выбору",
-  },
-  {
-    title: "Лучшие цены за материалы",
-    txt: "Закупаем материалы напрямую у поставщиков",
-  },
-]);
 
 onMounted(async () => {
   await getHome();
@@ -760,5 +744,11 @@ onMounted(async () => {
 
 .btn-bottom {
   padding: 4rem 0;
+}
+
+.sys_slider__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

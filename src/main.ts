@@ -7,7 +7,7 @@ import App from "./App.vue";
 import router from "./router";
 import setupGlobalLoadingMiddleware from "./middleware/setupGlobalLoadingMiddleware";
 import { MaskInput } from "vue-3-mask";
-
+import "./assets/css/main.css";
 const app = createApp(App);
 app.component("Icons", Icons);
 app.use(createPinia());

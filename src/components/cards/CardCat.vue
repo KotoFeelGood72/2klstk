@@ -2,7 +2,7 @@
   <div class="cat">
     <RouterLink :to="`shop/category/${cat.slug}?cat_id=${cat.id}`">
       <div class="cat_img">
-        <img :src="cat.acf.img.url" :alt="cat.acf.img.alt" />
+        <img :src="cat.acf.img" />
       </div>
       <div class="cat__content">
         <h3>{{ cat.name }}</h3>
@@ -24,6 +24,11 @@ defineProps<{
   overflow: hidden;
   position: relative;
   color: #fff;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
   a {
     color: inherit;
   }
@@ -33,6 +38,7 @@ defineProps<{
   img {
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease-in-out;
   }
 }
 

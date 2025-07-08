@@ -24,11 +24,7 @@
               </a>
             </li>
           </ul>
-          <btn
-            name="Отправить проект на просчет"
-            :caps="5"
-            @click="openModal('form', 'price')"
-          />
+          <btn name="Отправить проект на просчет" @click="openModal('form', 'price')" />
           <div class="header__work_time">
             <div class="header__date">Без выходных 9:00-18:00</div>
             <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a>

@@ -74,16 +74,13 @@
               name="Оставить заявку"
               @click.prevent="handleSubmit"
               size="large"
-              :caps="5"
             />
           </div>
         </div>
       </div>
       <div class="object__tabs">
         <ul class="object_tab__links">
-          <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">
-            Описание
-          </li>
+          <li :class="{ active: activeTab === 1 }" @click="setActiveTab(1)">Описание</li>
           <li :class="{ active: activeTab === 2 }" @click="setActiveTab(2)">
             Характеристики
           </li>

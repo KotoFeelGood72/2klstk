@@ -3,15 +3,15 @@
     <div class="popular__card">
       <div class="card js-popular-card-popup">
         <div class="card__img_w">
-          <img
+          <!-- <img
             v-if="news?.acf?.photos"
             class="card__img"
             :src="news?.acf.photos[0]?.url"
-          />
+          /> -->
         </div>
         <div class="card__info">
-          <div class="card__title">{{ news.acf.title }}</div>
-          <ul class="card__list">
+          <!-- <div class="card__title">{{ news.acf.title }}</div> -->
+          <!-- <ul class="card__list">
             <li
               class="card__item"
               v-for="(character, i) in news.acf.character"
@@ -23,9 +23,9 @@
               <div class="card__item_title">{{ character.name }}:</div>
               <div class="card__item_descr">{{ character.value }}</div>
             </li>
-          </ul>
+          </ul> -->
           <div class="card__price">
-            Стоимость <strong>{{ news.acf.price }}</strong>
+            <!-- Стоимость <strong>{{ news.acf.price }}</strong> -->
           </div>
           <div class="btn-project">
             <btn style="display: inline-flex" name="Подробнее" size="medium" />

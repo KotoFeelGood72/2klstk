@@ -56,7 +56,7 @@ export const useNewsStore = defineStore("news", {
         return null;
       }
     },
-    async fetchPostsByCategoryId(id: number, perPage: number = 100) {
+    async fetchPostsByCategoryId(id: any, perPage: number = 100) {
       try {
         // 1) Получаем категорию по ID
         const { data: category } = await url.get(`/categories/${id}`);
@@ -94,7 +94,7 @@ export const useNewsStore = defineStore("news", {
           .map((p: any) => p.id)
           .sort(() => Math.random() - 0.5)
           .slice(0, count)
-          .map((id) => `include[]=${id}`)
+          .map((id: any) => `include[]=${id}`)
           .join("&");
 
         /* Шаг 3: грузим уже полноценные записи */

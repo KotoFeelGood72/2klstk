@@ -1,6 +1,6 @@
 <template>
   <section class="section step js-step-slider-w">
-    <div class="section_in step__in">
+    <div class="container step__in">
       <h2 class="step__title">Как мы <strong> работаем</strong></h2>
       <div class="step__list_w">
         <Swiper
@@ -18,7 +18,7 @@
           }"
         >
           <SwiperSlide v-for="(item, i) in steps" :key="'works-item-slide-' + item.id">
-            <li class="step__card">
+            <li class="step__card lg:aspect-auto aspect-video">
               <div class="step__card_info">
                 <div class="step__card_title">{{ item.title }}</div>
                 <div class="step__card_descr">{{ item.txt }}</div>

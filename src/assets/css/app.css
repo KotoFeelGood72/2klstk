@@ -2041,7 +2041,7 @@ select.form_select__element {
 }
 .calc__progres {
   /* background-color: #e6e7dd; */
-  background-color: #cc241e10;
+  background-color: #cddbb53f;
   border-radius: 31rem;
   height: 2.3rem;
   margin-bottom: 2rem;
@@ -2091,7 +2091,7 @@ select.form_select__element {
 }
 
 .calc__progres_line {
-  background-color: #cc231e;
+  background-color: #cddbb5;
   /* background-color: #b2c593; */
   border-radius: 31rem;
   height: 100%;
@@ -2861,6 +2861,13 @@ input:checked ~ .calc__slide_item_icon {
   padding: 3rem 2rem 4rem;
   min-height: 19rem;
 }
+
+@media (max-width: 767px) {
+  .step__card_info {
+    min-height: 21rem;
+    padding: 2rem;
+  }
+}
 .step__card_title {
   font-size: 2rem;
   font-weight: 600;
@@ -3247,9 +3254,9 @@ input:checked ~ .calc__slide_item_icon {
   font-weight: 500;
   font-weight: 600;
 }
-.contact__row {
+/* .contact__row {
   display: grid;
-}
+} */
 .contact__row_icon {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -3288,7 +3295,7 @@ input:checked ~ .calc__slide_item_icon {
   width: 3rem;
   color: #b2c593;
 }
-.contact__map {
+/* .contact__map {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -3299,7 +3306,7 @@ input:checked ~ .calc__slide_item_icon {
   position: absolute;
   top: 0;
   width: 100%;
-}
+} */
 .contact__day:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -3656,11 +3663,11 @@ input:checked ~ .calc__slide_item_icon {
   :root {
     --height-header: 12rem;
   }
-  .header__row:last-child {
+  /* .header__row:last-child {
     opacity: 0;
     pointer-events: none;
     position: absolute;
-  }
+  } */
   .body--open_menu_state .header__row:last-child {
     opacity: 1;
     pointer-events: auto;
@@ -4123,7 +4130,7 @@ input:checked ~ .calc__slide_item_icon {
     margin-bottom: 3rem;
   }
   .step__card_title:before {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   .step__rev_info {
     border-radius: 1rem;
@@ -4252,10 +4259,10 @@ input:checked ~ .calc__slide_item_icon {
   .contact__row_icon:not(:last-child) {
     margin-bottom: 2rem;
   }
-  .contact__map {
+  /* .contact__map {
     border-radius: 2rem;
     padding-bottom: max(25%, 30rem);
-  }
+  } */
   .contact__phone {
     font-size: 2rem;
   }
@@ -5012,10 +5019,10 @@ input:checked ~ .calc__slide_item_icon {
   .contact__row_icon:not(:last-child) {
     margin-bottom: 3.6rem;
   }
-  .contact__map {
+  /* .contact__map {
     border-radius: 3rem;
     padding-bottom: 75%;
-  }
+  } */
   .contact__day {
     font-size: 2rem;
   }
@@ -5437,7 +5444,7 @@ input:checked ~ .calc__slide_item_icon {
     font-size: 2.6rem;
   }
   .step__card_title:before {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
   .step__card_descr,
   .step__rev_descr,

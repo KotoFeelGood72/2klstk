@@ -4,6 +4,7 @@ import { api, apiOr, url, custom } from "@/api/axios";
 export const useProjectsStore = defineStore("projects", {
   state: () => ({
     projects: null as any,
+    currentCategory: null as any,
     categories: null as any,
     sendObject: {
       image: null as string | null,
@@ -12,6 +13,9 @@ export const useProjectsStore = defineStore("projects", {
     },
   }),
   actions: {
+    async setCategory(catName: string) {
+      this.currentCategory = catName;
+    },
     async getProjects() {
       try {
         const response = await api.get("/projects/all-projects.json");
@@ -82,6 +86,9 @@ export const useProjectsStore = defineStore("projects", {
       this.sendObject.title = title;
       this.sendObject.complectation = complectation;
     },
+  },
+  persist: {
+    paths: ["currentCategory"], // явно указываем, что сохранять
   },
 });
 

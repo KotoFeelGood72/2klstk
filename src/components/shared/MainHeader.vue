@@ -1,6 +1,6 @@
 <template>
   <header class="header js-header" :class="{ 'header--scrolled': isScrolled }">
-    <div class="header__in">
+    <div class="container">
       <div class="header__row">
         <div class="header__logo_row">
           <RouterLink class="header__logo" to="/">
@@ -41,14 +41,18 @@
         </button>
       </div>
     </div>
-    <div class="header_bottom">
-      <div class="section_in">
+    <div class="header_bottom lg:flex hidden">
+      <div class="container">
         <div class="header_bottom__main">
           <div class="header_shop">
             <RouterLink to="/shop">Проекты и цены</RouterLink>
           </div>
           <ul class="header__nav_list">
-            <li class="menu-item" v-for="(item, i) in menu" :key="'menu-item-' + i">
+            <li
+              class="menu-item uppercase"
+              v-for="(item, i) in menu"
+              :key="'menu-item-' + i"
+            >
               <a :href="item.link">{{ item.name }}</a>
             </li>
           </ul>
@@ -84,7 +88,7 @@ const menu = ref([
   { name: "Новости", link: "/news" },
   { name: "Этапы строительства", link: "/#steps" },
   { name: "О компании", link: "/#about" },
-  { name: "Контакты", link: "/#contacts" },
+  { name: "Контакты", link: "/contacts" },
   { name: "Отзывы", link: "/#reviews" },
 ]);
 
@@ -189,7 +193,7 @@ onUnmounted(() => {
     }
   }
   @include bp($point_1) {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .btn {

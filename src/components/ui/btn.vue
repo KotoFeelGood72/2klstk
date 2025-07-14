@@ -32,6 +32,12 @@ const props = defineProps<{
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease-in-out;
+  @include bp($point_2) {
+    width: 100%;
+    justify-content: center;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+  }
 
   &.blue {
     background-color: rgba(17, 100, 226, 0.5568627451);
@@ -43,14 +49,26 @@ const props = defineProps<{
   &.small {
     padding: 1rem 2rem;
     font-size: 1.4rem;
+    @include bp($point_2) {
+      padding: 1.2rem 3rem;
+      font-size: 1.4rem;
+    }
   }
   &.medium {
     padding: 1.8rem 3rem;
     font-size: 2rem;
+    @include bp($point_2) {
+      padding: 1.2rem 3rem;
+      font-size: 1.4rem;
+    }
   }
   &.large {
     padding: 2rem 4rem;
     font-size: 2.2rem;
+    @include bp($point_2) {
+      padding: 1.2rem 3rem;
+      font-size: 1.4rem;
+    }
   }
   &:hover {
     background-color: $hover;

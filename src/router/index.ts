@@ -22,10 +22,20 @@ const router = createRouter({
       path: "/privacy",
       name: "privacy",
       component: () => import("../views/PolicyView.vue"),
+      meta: {
+        title: "Политика конфиденциальности",
+      },
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      component: () => import("../views/ContactsView.vue"),
+      meta: {
+        title: "Контакты",
+      },
     },
     {
       path: "/shop",
-
       children: [
         {
           path: "",
@@ -48,7 +58,7 @@ const router = createRouter({
           name: "shop-category",
           component: () => import("../views/Shop/ShopViewCategory.vue"),
           meta: {
-            title: "Детали проекта 1",
+            title: "Категория",
           },
         },
       ],
@@ -62,7 +72,7 @@ const router = createRouter({
           name: "news-list",
           component: () => import("../views/News/NewsView.vue"),
           meta: {
-            title: "Каталог проектов",
+            title: "Новости",
           },
         },
         {
@@ -70,7 +80,7 @@ const router = createRouter({
           name: "news-single",
           component: () => import("../views/News/NewsSingle.vue"),
           meta: {
-            title: "Детали проекта 1",
+            title: "Детали новости",
           },
         },
         {
@@ -78,7 +88,7 @@ const router = createRouter({
           name: "news-category",
           component: () => import("../views/News/NewsViewCategory.vue"),
           meta: {
-            title: "Детали проекта 1",
+            title: "Категория",
           },
         },
       ],

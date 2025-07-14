@@ -1,6 +1,6 @@
 <template>
   <section class="section calc js-step-form-w">
-    <div class="section_in calc__in">
+    <div class="container calc__in">
       <h2 class="calc__title">
         <strong>Получите предварительный расчет стоимости </strong> дома за 1 минуту
       </h2>

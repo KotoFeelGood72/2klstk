@@ -1,6 +1,6 @@
 <template>
   <div class="mb-32">
-    <div class="section_in">
+    <div class="container">
       <div>
         <div>
           <h4 class="lg:text-40 font-medium">Похожие предложения</h4>

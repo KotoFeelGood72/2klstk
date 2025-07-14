@@ -1,7 +1,7 @@
 <template>
   <div class="product-slider flex flex-col gap-4 select-none">
-    <div class="relative flex lg:h-[484px] gap-5">
-      <div class="w-5/6 relative border border-green-50">
+    <div class="relative flex lg:h-[484px] gap-5 lg:flex-row flex-col">
+      <div class="lg:w-5/6 w-full relative border border-green-50">
         <swiper
           :modules="[Thumbs, Navigation]"
           :thumbs="{ swiper: thumbsSwiper }"
@@ -11,27 +11,35 @@
           :navigation="{ nextEl: '.next', prevEl: '.prev' }"
           class="main-swiper rounded-3xl overflow-hidden h-full"
         >
-          <swiper-slide v-for="(item, i) in slides" :key="`main-slide-${props.id}-${i}`">
+          <swiper-slide
+            v-for="(item, i) in slides"
+            :key="`main-slide-${props.id}-${i}`"
+            class="bg-white"
+          >
             <img
               :src="item.url"
               :alt="item.alt || 'product'"
-              class="flex items-center justify-center w-full h-full object-cover"
+              class="flex items-center justify-center w-full lg:h-full h-[192px] lg:object-cover object-contain"
             />
           </swiper-slide>
         </swiper>
         <div
-          class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-10 pointer-events-none flex justify-between items-center w-full"
+          class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-10 pointer-events-none flex justify-between items-center w-full h-full"
         >
-          <div class="icon prev pointer-events-auto cursor-pointer bg-white rounded-md">
-            <Icons icon="octicon:chevron-left-16" :size="50" />
+          <div
+            class="icon prev pointer-events-auto cursor-pointer bg-white/70 h-full justify-center items-center flex text-dark hover:scale-x-125 transition-all lg:px-5 px-2"
+          >
+            <Icons icon="octicon:chevron-left-16" :size="30" />
           </div>
-          <div class="icon next pointer-events-auto cursor-pointer bg-white rounded-md">
-            <Icons icon="octicon:chevron-right-16" :size="50" />
+          <div
+            class="icon next pointer-events-auto cursor-pointer bg-white/70 h-full justify-center items-center flex text-dark hover:scale-x-125 transition-all lg:px-5 px-2"
+          >
+            <Icons icon="octicon:chevron-right-16" :size="30" />
           </div>
         </div>
       </div>
 
-      <div class="w-1/6 h-full">
+      <div class="lg:w-1/6 lg:block hidden">
         <swiper
           :modules="[Thumbs, Navigation]"
           v-bind="sliderOptions.thumbs"

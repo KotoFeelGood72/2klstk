@@ -1,6 +1,6 @@
 <template>
   <section class="section sys_slider js-sys-slider-w">
-    <div class="section_in sys_slider__in">
+    <div class="container sys_slider__in">
       <h2 class="sys_slider__title" v-html="title ? title : ''"></h2>
       <div class="sys_slider__pag"></div>
       <Swiper
@@ -15,10 +15,7 @@
         }"
         :pagination="{ el: '.sys_slider__pag', clickable: true }"
       >
-        <SwiperSlide
-          v-for="(item, i) in systems"
-          :key="'works-item-slide-' + item.id"
-        >
+        <SwiperSlide v-for="(item, i) in systems" :key="'works-item-slide-' + item.id">
           <div class="sys_slider__item">
             <div class="sys_slider__row">
               <div class="sys_slider__col sys_slider__col--img">
@@ -26,7 +23,10 @@
 
                 <div class="sys_slider__img_box">
                   <div class="sys_slider__img_w">
-                    <img class="sys_slider__img" :src="item.img" />
+                    <img
+                      class="sys_slider__img lg:aspect-auto aspect-square"
+                      :src="item.img"
+                    />
                   </div>
                 </div>
               </div>
@@ -37,7 +37,10 @@
                     v-for="(subitem, i) in item.gallery"
                     :key="'subitem-gallery-item-' + i"
                   >
-                    <img class="sys_slider__info_img" :src="subitem.img" />
+                    <img
+                      class="sys_slider__info_img lg:aspect-auto aspect-video"
+                      :src="subitem.img"
+                    />
                   </div>
                 </div>
                 <div class="sys_slider__info_about">
@@ -57,10 +60,7 @@
                 </div>
                 <div class="sys_slider__info_review">
                   <div class="sys_slider__manager_img_w">
-                    <img
-                      class="sys_slider__manager_img"
-                      :src="item.review_img"
-                    />
+                    <img class="sys_slider__manager_img" :src="item.review_img" />
                   </div>
                   <div class="sys_slider__info_review_info">
                     <div class="sys_slider__info_review_info_in">
@@ -83,13 +83,13 @@
       </Swiper>
       <div class="sys_slider__nav js-sys-nav-w">
         <button
-          class="sys_slider__navigation sys_slider__navigation--prev_mod js-sys-navigation-prev"
+          class="sys_slider__navigation sys_slider__navigation--prev_mod js-sys-navigation-prev flex items-center justify-center"
           type="button"
         >
           <Icons icon="fluent:chevron-left-28-regular" :size="30" />
         </button>
         <button
-          class="sys_slider__navigation sys_slider__navigation--next_mod js-sys-navigation-next"
+          class="sys_slider__navigation sys_slider__navigation--next_mod js-sys-navigation-next flex items-center justify-center"
           type="button"
           aria-label="Next slide"
         >

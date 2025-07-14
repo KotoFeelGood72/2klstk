@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrums">
-    <div class="section_in">
+    <div class="container">
       <nav aria-label="breadcrumb" class="breadcrumbs_main">
         <ul>
           <!-- Корневая ссылка -->
@@ -10,18 +10,15 @@
             </RouterLink>
           </li>
 
-          <!-- Динамически построенные «крошки» -->
+          <!-- Динамически или вручную переданные «крошки» -->
           <li
             v-for="(crumb, index) in breadcrumbs"
-            :key="crumb.path"
+            :key="crumb.path + index"
             class="breadcrumb__item"
           >
-            <!-- Последний элемент — текущее положение, без ссылки -->
             <span v-if="index === breadcrumbs.length - 1" class="breadcrumb__current">
               {{ crumb.name }}
             </span>
-
-            <!-- Остальные элементы — обычные ссылки -->
             <RouterLink v-else :to="crumb.path" class="breadcrumb__link">
               {{ crumb.name }}
             </RouterLink>
@@ -33,9 +30,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, toRefs } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import type { RouteLocationMatched } from "vue-router";
+import { toRefs } from "vue";
+import { useBreadcrumbs } from "@/composables/useBreadcrumbs";
 
 export interface Props {
   homeLabel?: string;
@@ -47,37 +43,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { homeLabel } = toRefs(props);
 
-// Текущий маршрут и инстанс роутера
-const route = useRoute();
-const router = useRouter();
-
-interface Crumb {
-  name: string;
-  path: string;
-}
-
-const breadcrumbs = computed<Crumb[]>(() =>
-  route.matched
-    .filter((record) => record.meta.breadcrumb !== false)
-    .map(
-      (record: RouteLocationMatched): Crumb => {
-        const name =
-          typeof record.meta.breadcrumb === "string"
-            ? (record.meta.breadcrumb as string)
-            : typeof record.meta.title === "string"
-            ? (record.meta.title as string)
-            : (record.name as string | undefined) ?? "";
-
-        const path = router.resolve({
-          name: record.name,
-          params: route.params,
-        }).path;
-
-        return { name, path };
-      }
-    )
-    .filter((crumb) => crumb.name && crumb.path && crumb.path !== "")
-);
+const { breadcrumbs } = useBreadcrumbs();
 </script>
 
 <style scoped lang="scss">

@@ -1,12 +1,11 @@
 <template>
   <div class="cat">
-    <RouterLink :to="dynamicPath">
-      <div class="cat_img">
-        <img :src="cat.acf.img" />
+    <RouterLink :to="dynamicPath" @click.native="setCategoryUi">
+      <div class="cat_img lg:aspect-auto aspect-square">
+        <img :src="cat.acf.img" class="w-full h-full object-cover" />
       </div>
       <div class="cat__content">
-        <h3>{{ cat.name }}</h3>
-        <p>{{ cat.description }}</p>
+        <h3 class="lg:text-20 text-12">{{ cat.name }}</h3>
       </div>
     </RouterLink>
   </div>
@@ -15,13 +14,13 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
+import { useProjectsStore } from "@/stores/useProjectStore";
 const props = defineProps<{
   cat: any;
 }>();
 
 const route = useRoute();
-
-console.log(route);
+const { setCategory } = useProjectsStore();
 
 const dynamicPath = computed(() => {
   if (route.name === "shop-list" || route.name === "shop-category") {
@@ -30,9 +29,13 @@ const dynamicPath = computed(() => {
   if (route.name === "news-list" || route.name === "news-category") {
     return `/news/category/${props.cat.slug}?cat_id=${props.cat.id}`;
   }
-  // fallback
+  //
   return `/category/${props.cat.slug}?cat_id=${props.cat.id}`;
 });
+
+const setCategoryUi = () => {
+  setCategory(props.cat);
+};
 </script>
 
 <style scoped lang="scss">
@@ -51,7 +54,9 @@ const dynamicPath = computed(() => {
   }
 }
 .cat_img {
-  height: 30rem;
+  @include bp($point_2, $direction: min) {
+    height: 30rem;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -67,5 +72,9 @@ const dynamicPath = computed(() => {
   z-index: 22;
   padding: 2rem;
   background-color: #4242429a;
+
+  @include bp($point_2) {
+    padding: 1rem;
+  }
 }
 </style>

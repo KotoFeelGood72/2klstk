@@ -7,15 +7,15 @@
     <transition name="fade-bg">
       <Preloader />
     </transition>
-    <!-- <transition name="slide-up">
-      <ModalCallback v-if="modals.form" />
-    </transition> -->
     <transition name="slide-up">
+      <ModalCallback v-if="modals.form" />
+    </transition>
+    <!-- <transition name="slide-up">
       <ModalObject v-if="modals.project" />
     </transition>
     <transition name="slide-up">
       <ModalSale v-if="modals.sale" />
-    </transition>
+    </transition> -->
     <transition name="slide-right">
       <ModalBurger v-if="modals.burger" />
     </transition>
@@ -27,18 +27,18 @@ import { computed, onMounted, onUnmounted, watch } from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import EmptyLayout from "@/layouts/EmptyLayout.vue";
 import ModalCallback from "./components/modals/ModalCallback.vue";
-import ModalObject from "./components/modals/ModalObject.vue";
+// import ModalObject from "./components/modals/ModalObject.vue";
 import ModalBurger from "./components/modals/ModalBurger.vue";
 import { useRoute } from "vue-router";
 import { useModalStoreRefs, useModalStore } from "./stores/useModalStore";
 import { useCloserModal } from "./composables/useCloserModal";
 import Preloader from "./components/Preloader.vue";
-import ModalSale from "./components/modals/ModalSale.vue";
+// import ModalSale from "./components/modals/ModalSale.vue";
 
 // @ts-ignore
-import snow from "./components/promo/snow.vue";
+// import snow from "./components/promo/snow.vue";
 
-const { openModal } = useModalStore();
+// const { openModal } = useModalStore();
 const { modals } = useModalStoreRefs();
 
 const { allCloserModal } = useCloserModal();

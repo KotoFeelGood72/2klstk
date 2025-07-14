@@ -15,7 +15,7 @@
           <div class="footer__row_icon">
             <span class="contact__icon">
               <Icons icon="clarity:envelope-solid" :size="30" /> </span
-            ><a href="mailto:">komfort@gmail.com</a>
+            ><a href="mailto:2klstk@mail.ru">2klstk@mail.ru</a>
           </div>
           <div class="footer__row_icon">
             <span class="contact__icon">

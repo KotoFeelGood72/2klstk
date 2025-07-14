@@ -2,11 +2,11 @@
   <div class="burger">
     <Close />
     <div class="burger-logo">
-      <RouterLink class="header__logo" to="/">
+      <RouterLink class="max-w-28" to="/">
         <img src="https://2klstk.ru/wp-content/uploads/2024/09/logo.png" />
       </RouterLink>
     </div>
-    <ul class="header__nav_list">
+    <ul class="header__nav_list flex flex-col gap-4">
       <li
         class="menu-item"
         v-for="(item, i) in menu"
@@ -17,35 +17,25 @@
       </li>
     </ul>
     <div class="burger__contact">
-      <!-- <a
-        class="header__yandex"
-        href="https://yandex.ru/maps/org/tekhnologii_komforta/165810670612/reviews/?ll=38.984871%2C45.111020&utm_source=my_review&z=15"
-        target="_blank"
-      >
-        <div class="header__yandex_img">
-          <img src="https://2klstk.ru/wp-content/uploads/2024/09/yandex.png" />
-        </div>
-        На основании 50 отзывов</a
-      > -->
       <YandexStar />
       <ul class="burger-social">
-        <li
-          class="header__social_item"
-          v-for="(item, i) in socials"
-          :key="'mobile-socials-item' + i"
-        >
-          <a class="header__social_link" :href="item.link" target="_blank">
-            <img :src="item.img" />
+        <li class="" v-for="(item, i) in socials" :key="'mobile-socials-item' + i">
+          <a
+            class="flex items-center justify-center w-14 h-14"
+            :href="item.link"
+            target="_blank"
+          >
+            <img :src="item.img" class="w-full h-full object-cover" />
           </a>
         </li>
       </ul>
-      <btn name="Отправить проект на просчет" @click="openForm('price')" />
       <div class="header__work_time">
         <div class="header__date">Без выходных 9:00-18:00</div>
         <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
         ><a class="header__call_us" @click="openForm()">Заказать звонок</a>
       </div>
     </div>
+    <btn name="Отправить проект на просчет" @click="openForm('price')" />
   </div>
 </template>
 
@@ -65,7 +55,8 @@ const socials = ref([
     link: "https://wtsp.cc/79282755456",
   },
   {
-    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
+    img:
+      "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
     link: "mailto:2klstk@mail.ru",
   },
 ]);

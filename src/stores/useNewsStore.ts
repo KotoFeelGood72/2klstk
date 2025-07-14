@@ -64,7 +64,7 @@ export const useNewsStore = defineStore("news", {
 
         // 2) Получаем посты по категории
         const { data: posts } = await url.get(
-          `/posts?categories=${category.id}&per_page=${perPage}&_embed`
+          `/posts?categories=${category.id}&per_page=${perPage}&_embed=true`
         );
 
         return {

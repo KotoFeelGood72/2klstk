@@ -1,6 +1,6 @@
 <template>
   <div class="shop">
-    <div class="section_in">
+    <div class="container">
       <div class="shop_head">
         <h1>Каталог проектов строительства домов</h1>
         <p>
@@ -82,6 +82,9 @@ onMounted(async () => {
   margin-bottom: 6rem;
   h1 {
     font-size: 4rem;
+    @include bp($point_2) {
+      font-size: 2.2rem;
+    }
   }
 }
 

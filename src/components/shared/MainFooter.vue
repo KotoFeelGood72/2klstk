@@ -86,10 +86,11 @@ const socials = ref([
 ]);
 
 const menu = ref([
-  { name: "Проекты и цены", link: "/#projects" },
+  { name: "Проекты", link: "/shop" },
+  { name: "Новости", link: "/news" },
   { name: "Этапы строительства", link: "/#steps" },
   { name: "О компании", link: "/#about" },
-  { name: "Контакты", link: "/#contacts" },
+  { name: "Контакты", link: "/contacts" },
   { name: "Отзывы", link: "/#reviews" },
 ]);
 </script>

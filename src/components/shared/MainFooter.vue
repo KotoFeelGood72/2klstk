@@ -67,6 +67,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useModalStore } from "@/stores/useModalStore";
+import { menu } from "@/data/Menu";
 
 const { openModal } = useModalStore();
 const socials = ref([
@@ -83,15 +84,6 @@ const socials = ref([
       "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
     link: "mailto:2klstk@mail.ru",
   },
-]);
-
-const menu = ref([
-  { name: "Проекты", link: "/shop" },
-  { name: "Новости", link: "/news" },
-  { name: "Этапы строительства", link: "/#steps" },
-  { name: "О компании", link: "/#about" },
-  { name: "Контакты", link: "/contacts" },
-  { name: "Отзывы", link: "/#reviews" },
 ]);
 </script>
 

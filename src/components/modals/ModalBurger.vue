@@ -45,6 +45,7 @@ import { ref } from "vue";
 import Close from "../ui/Close.vue";
 import YandexStar from "../promo/YandexStar.vue";
 import { useModalStore } from "@/stores/useModalStore";
+import { menu } from "@/data/Menu";
 const socials = ref([
   {
     img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/telegram.svg",
@@ -61,14 +62,6 @@ const socials = ref([
   },
 ]);
 
-const menu = ref([
-  { name: "Проекты", link: "/shop" },
-  { name: "Новости", link: "/news" },
-  { name: "Этапы строительства", link: "/#steps" },
-  { name: "О компании", link: "/#about" },
-  { name: "Контакты", link: "/contacts" },
-  { name: "Отзывы", link: "/#reviews" },
-]);
 const { openModal, closeModal } = useModalStore();
 
 const openForm = (mode?: string) => {

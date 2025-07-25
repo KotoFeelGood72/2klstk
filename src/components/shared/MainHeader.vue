@@ -66,6 +66,7 @@
 import btn from "../ui/btn.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import YandexStar from "../promo/YandexStar.vue";
+import { menu } from "@/data/Menu";
 
 import { useModalStore } from "@/stores/useModalStore";
 const socials = ref([
@@ -84,20 +85,11 @@ const socials = ref([
   },
 ]);
 
-const menu = ref([
-  { name: "Новости", link: "/news" },
-  { name: "Этапы строительства", link: "/#steps" },
-  { name: "О компании", link: "/#about" },
-  { name: "Контакты", link: "/contacts" },
-  { name: "Отзывы", link: "/#reviews" },
-]);
-
 const isScrolled = ref(false);
 
 const { openModal } = useModalStore();
 
 const handleScroll = () => {
-  // Если прокрутка больше, чем 50px, добавляем класс
   isScrolled.value = window.scrollY > 50;
 };
 

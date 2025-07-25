@@ -569,7 +569,7 @@ input[type="submit"] {
   line-height: 1;
 }
 .header__nav_list a {
-  /* color: #444; */
+  color: #444;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -2369,12 +2369,12 @@ input:checked ~ .calc__slide_item_icon {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.adv__adv_list {
+/* .adv__adv_list {
   counter-reset: list 0;
   display: grid;
   gap: 4rem 9vw;
   grid-auto-flow: row;
-}
+} */
 .adv__adv_item {
   counter-increment: list;
 }
@@ -2386,7 +2386,7 @@ input:checked ~ .calc__slide_item_icon {
 .adv__adv_title:not(:last-child) {
   margin-bottom: 1rem;
 }
-.adv__adv_title:before {
+/* .adv__adv_title:before {
   color: #cddbb5;
   content: counter(list);
   display: block;
@@ -2395,7 +2395,7 @@ input:checked ~ .calc__slide_item_icon {
   font-weight: 500;
   height: 100%;
   width: 100%;
-}
+} */
 .popular__title {
   font-weight: 400;
   position: relative;
@@ -4598,7 +4598,7 @@ input:checked ~ .calc__slide_item_icon {
   .adv__about_descr {
     font-size: 2rem;
     max-width: 66rem;
-    width: 40vw;
+    width: 33vw;
   }
   .adv__about_descr p:not(:last-child) {
     margin-bottom: 2rem;

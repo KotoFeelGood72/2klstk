@@ -1,5 +1,5 @@
 <template>
-  <section class="section sys_slider js-sys-slider-w">
+  <section class="sys_slider js-sys-slider-w">
     <div class="container sys_slider__in">
       <h2 class="sys_slider__title" v-html="title ? title : ''"></h2>
       <div class="sys_slider__pag"></div>

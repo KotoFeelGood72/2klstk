@@ -1,5 +1,5 @@
 <template>
-  <section class="section step js-step-slider-w">
+  <section class="step js-step-slider-w">
     <div class="container step__in">
       <h2 class="step__title">Как мы <strong> работаем</strong></h2>
       <div class="step__list_w">

@@ -1,13 +1,11 @@
 <template>
   <div v-if="!isCookieAccepted" class="note">
     <div class="coockie__img">
-      <img
-        src="http://2klstk.ru/wp-content/uploads/2024/11/cpnmhe6e7yadeae.webp"
-      />
+      <img src="http://2klstk.ru/wp-content/uploads/2024/11/cpnmhe6e7yadeae.webp" />
     </div>
     <p>
-      Этот сайт использует cookie для хранения данных. Продолжая использовать
-      сайт, Вы даете согласие на работу с этими файлами
+      Этот сайт использует cookie для хранения данных. Продолжая использовать сайт, Вы
+      даете согласие на работу с этими файлами
     </p>
     <btn name="Принять" size="small" @click="acceptCookie" />
   </div>
@@ -18,18 +16,22 @@ import { ref, onMounted } from "vue";
 import btn from "../ui/btn.vue";
 
 const isCookieAccepted = ref(false);
+const isReady = ref(false); // добавлено
 
-// Проверяем, есть ли кука
 onMounted(() => {
   isCookieAccepted.value = document.cookie.includes("cookieAccepted=true");
+  isReady.value = true; // показываем компонент только после проверки
 });
 
-// Функция для принятия куки
 const acceptCookie = () => {
-  const currentDate = new Date().toUTCString(); // Получаем текущую дату в формате UTC
-  document.cookie = `cookieAccepted=true; path=/; expires=Fri, 31 Dec 2024 23:59:59 GMT`;
-  document.cookie = `cookieDate=${currentDate}; path=/; expires=Fri, 31 Dec 2024 23:59:59 GMT`;
-  isCookieAccepted.value = true; // Скрываем сообщение
+  const currentDate = new Date().toUTCString();
+  const expires = new Date();
+  expires.setFullYear(expires.getFullYear() + 1);
+
+  document.cookie = `cookieAccepted=true; path=/; expires=${expires.toUTCString()}`;
+  document.cookie = `cookieDate=${currentDate}; path=/; expires=${expires.toUTCString()}`;
+
+  isCookieAccepted.value = true;
 };
 </script>
 

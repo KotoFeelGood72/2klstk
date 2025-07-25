@@ -49,11 +49,16 @@
           </div>
           <ul class="header__nav_list">
             <li
-              class="menu-item uppercase"
               v-for="(item, i) in menu"
               :key="'menu-item-' + i"
+              :class="['menu-item uppercase', { 'is-active ': isActive(item.link) }]"
             >
-              <a :href="item.link">{{ item.name }}</a>
+              <template v-if="item.link.startsWith('#')">
+                <a :href="item.link">{{ item.name }}</a>
+              </template>
+              <template v-else>
+                <RouterLink :to="item.link">{{ item.name }}</RouterLink>
+              </template>
             </li>
           </ul>
         </div>
@@ -67,24 +72,11 @@ import btn from "../ui/btn.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import YandexStar from "../promo/YandexStar.vue";
 import { menu } from "@/data/Menu";
+import { socials } from "@/data/Socials";
+import { useActiveLink } from "@/composables/useActiveLink";
 
 import { useModalStore } from "@/stores/useModalStore";
-const socials = ref([
-  {
-    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/telegram.svg",
-    link: "https://t.me/masternavse2",
-  },
-  {
-    img: "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/whatsapp.svg",
-    link: "https://wtsp.cc/79282755456",
-  },
-  {
-    img:
-      "https://2klstk.ru/wp-content/themes/comfort/assets/images/contact/mail-social.svg",
-    link: "mailto:2klstk@mail.ru",
-  },
-]);
-
+const { isActive } = useActiveLink();
 const isScrolled = ref(false);
 
 const { openModal } = useModalStore();
@@ -161,7 +153,7 @@ onUnmounted(() => {
 .header__nav_list {
   font-size: 1.6rem;
   padding: 2rem 0;
-  color: white;
+  // color: white;
   justify-content: flex-start;
   a {
     color: inherit;

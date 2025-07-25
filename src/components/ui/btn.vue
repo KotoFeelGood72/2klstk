@@ -28,7 +28,7 @@ const props = defineProps<{
   padding: 1.6rem 2.4rem;
   border-radius: 1rem;
   background-color: $green;
-  color: $white;
+  color: $dark;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease-in-out;

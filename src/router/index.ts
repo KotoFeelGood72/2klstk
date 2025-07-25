@@ -2,16 +2,24 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL_ASSET),
-  scrollBehavior(to: any, from: any, savedPosition: any) {
-    if (to.path === from.path && to.fullPath !== from.fullPath) {
-      return null;
+  scrollBehavior(to, from, savedPosition) {
+    // Прокрутка к якорю
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
     }
+
+    // Если есть сохранённая позиция (при переходе назад/вперёд)
     if (savedPosition) {
       return savedPosition;
-    } else {
-      return { top: 0 };
     }
+
+    // Прокрутка вверх по умолчанию
+    return { top: 0 };
   },
+
   routes: [
     {
       path: "/",

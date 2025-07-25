@@ -30,7 +30,7 @@
         </li>
       </ul>
       <div class="header__work_time">
-        <div class="header__date">Без выходных 9:00-18:00</div>
+        <div class="header__date">Рабочие: ПН-ПТ 9:00-18:00 <br />СБ-ВС Выходные</div>
         <a class="header__phone" href="tel:+79282755456">+7 928 275-54-56</a
         ><a class="header__call_us" @click="openForm()">Заказать звонок</a>
       </div>

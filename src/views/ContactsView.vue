@@ -23,7 +23,7 @@
         </div>
         <div class="contact__col contact__col--info">
           <h2 class="contact__title">Наши контакты</h2>
-          <div class="contact__day">Без выходных 9:00-18:00</div>
+          <div class="contact__day">Рабочие: ПН-ПТ 9:00-18:00 <br />СБ-ВС Выходные</div>
           <a class="contact__phone" href="tel:+79282755456">+7 928 275 54 56</a>
           <h3 class="contact__subtitle">Отвечаем мгновенно</h3>
           <ul class="contact__social_list">

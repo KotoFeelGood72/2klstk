@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="footer__col footer__col--info">
-          <div class="footer__date">Без выходных 9:00-18:00</div>
+          <div class="footer__date">Рабочие: ПН-ПТ 9:00-18:00 <br />СБ-ВС Выходные</div>
           <a class="footer__phone" href="tel:+79282755456">+7 928 275-54-56</a
           ><a class="footer__call_us" @click="openModal('form')">Заказать звонок</a>
           <ul class="footer__social_list">

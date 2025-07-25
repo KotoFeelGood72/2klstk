@@ -48,7 +48,7 @@
       </div>
       <ul class="adv__adv_list grid lg:grid-cols-2 grid-cols-1 gap-20">
         <li class="adv__adv_item space-y-4" v-for="(item, i) in advList" :key="i">
-          <div class="lg:text-30 text-24 flex gap-6">
+          <div class="lg:text-30 text-20 flex gap-6">
             <span
               class="w-20 min-w-20 h-20 flex items-center justify-center bg-[#b2c593] p-5 rounded-full"
               >{{ i + 1 }}</span

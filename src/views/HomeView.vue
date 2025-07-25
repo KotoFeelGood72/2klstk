@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:space-y-16 lg:pt-20 lg:pb-40">
+  <div class="lg:space-y-16 space-y-10 lg:pt-20 lg:pb-40">
     <section class="hero" v-if="home">
       <div class="container hero__in">
         <div class="hero__row">

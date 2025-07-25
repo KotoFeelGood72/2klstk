@@ -309,7 +309,7 @@
   <section class="section stage js-sys-slider-w" id="steps">
     <div class="container stage__in">
       <h2 class="stage__title">
-        <strong>Посмотрите 4 этапа,</strong> как будет строиться ваш идеальный дом
+        <strong>4 шага к вашему </strong> идеальному дому — всё просто!
       </h2>
       <div class="sys_slider__pag js-sys-pag-w"></div>
       <div class="stage__slider_w">

@@ -3622,7 +3622,7 @@ input:checked ~ .calc__slide_item_icon {
 }
 @media screen and (min-width: 1200px) {
   :root {
-    --height-header: 14.8rem;
+    --height-header: 16.2rem;
   }
   .header__nav_list {
     -webkit-box-orient: horizontal;

@@ -7,6 +7,9 @@
       </RouterLink>
     </div>
     <ul class="header__nav_list flex flex-col gap-4">
+      <li class="menu-item" @click="closeModal('burger')">
+        <a href="/shop">Проекты</a>
+      </li>
       <li
         class="menu-item"
         v-for="(item, i) in menu"

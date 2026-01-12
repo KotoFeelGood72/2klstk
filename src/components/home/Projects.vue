@@ -59,14 +59,13 @@
         </div>
 
         <div class="projects__bottom">
-          <!-- v-if="visibleProjects.length < projects.length" -->
           <btn
+          v-if="visibleProjects.length < projects.length"
             name="Смотреть все"
             size="large"
             class="btn_base_s"
-            @click="router.push('/shop')"
+            @click="loadMore"
           />
-          <!-- @click="loadMore" -->
         </div>
       </div>
     </div>

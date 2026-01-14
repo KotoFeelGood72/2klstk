@@ -61,7 +61,7 @@
         <div class="projects__bottom">
           <btn
           v-if="visibleProjects.length < projects.length"
-            name="Смотреть все"
+            name="Загрузить еще"
             size="large"
             class="btn_base_s"
             @click="loadMore"
@@ -91,11 +91,11 @@ const itemsPerPage = 6; // Количество проектов на стран
 let currentPage = 1; // Текущая страница
 
 // Открытие модального окна с добавлением query
-const opeModalProject = (id: number) => {
-  router.push({ query: { project: id } }).then(() => {
-    openModal("project");
-  });
-};
+// const opeModalProject = (id: number) => {
+//   router.push({ query: { project: id } }).then(() => {
+//     openModal("project");
+//   });
+// };
 
 // Функция для загрузки проектов по страницам
 const loadMore = () => {

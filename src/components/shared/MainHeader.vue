@@ -44,9 +44,6 @@
     <div class="header_bottom lg:flex hidden">
       <div class="container">
         <div class="header_bottom__main">
-          <div class="header_shop">
-            <RouterLink to="/shop">Проекты и цены</RouterLink>
-          </div>
           <ul class="header__nav_list">
             <li
               v-for="(item, i) in menu"
@@ -233,19 +230,5 @@ onUnmounted(() => {
 .header_bottom__main {
   @include flex-start;
   gap: 2rem;
-}
-
-.header_shop {
-  color: #fff;
-  background-color: #444;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  height: 100%;
-  a {
-    padding: 1.8rem 3rem;
-    color: inherit;
-    @include flex-center;
-    text-decoration: none;
-  }
 }
 </style>

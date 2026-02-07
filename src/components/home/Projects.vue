@@ -8,54 +8,9 @@
             v-for="(item, i) in visibleProjects"
             :key="'popular-projects-item' + i"
             :project="item"
+            :open-in-modal="true"
+            @open="opeModalProject((item as { id: number }).id)"
           />
-          <!-- <div
-            class="popular__card"
-            v-for="(item, i) in visibleProjects"
-            :key="'popular-projects-item' + i"
-            @click="opeModalProject(item.id)"
-          >
-            <div class="card js-popular-card-popup">
-              <div class="card__img_w">
-                <div class="card__decor">
-                  <img
-                    src="http://2klstk.ru/wp-content/uploads/2024/11/bda4f13cd3190eed9d5544edeec51085.png"
-                  />
-                </div>
-                <img
-                  class="card__img"
-                  :src="item.acf.gallery[item.acf.gallery.length - 1].img"
-                />
-              </div>
-              <div class="card__info">
-                <div class="card__title">{{ item.acf.title }}</div>
-                <ul class="card__list">
-                  <li
-                    class="card__item"
-                    v-for="(character, i) in item.acf.character"
-                    :key="'character-item' + i"
-                  >
-                    <div class="card__item_icon">
-                      <Icons :icon="getIcon(character.icon)" />
-                    </div>
-                    <div class="card__item_title">{{ character.name }}:</div>
-                    <div class="card__item_descr">{{ character.value }}</div>
-                  </li>
-                </ul>
-                <div class="card__price">
-                  Стоимость <strong>{{ item.acf.price }}</strong>
-                </div>
-                <div class="btn-project">
-                  <btn
-                    style="display: inline-flex"
-                    name="Подробнее"
-                    size="medium"
-                    @click.stop="opeModalProject(item.id)"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
 
         <div class="projects__bottom">
@@ -91,11 +46,11 @@ const itemsPerPage = 6; // Количество проектов на стран
 let currentPage = 1; // Текущая страница
 
 // Открытие модального окна с добавлением query
-// const opeModalProject = (id: number) => {
-//   router.push({ query: { project: id } }).then(() => {
-//     openModal("project");
-//   });
-// };
+const opeModalProject = (id: number) => {
+  router.push({ query: { project: id } }).then(() => {
+    openModal("project");
+  });
+};
 
 // Функция для загрузки проектов по страницам
 const loadMore = () => {
@@ -123,18 +78,6 @@ onMounted(() => {
   });
 });
 
-const getIcon = (icon: string) => {
-  switch (icon) {
-    case "size-1":
-      return "ph:resize-thin";
-    case "room":
-      return "fluent:conference-room-20-regular";
-    case "square":
-      return "tabler:meter-square";
-    case "bad":
-      return "material-symbols-light:bedroom-child-outline-rounded";
-  }
-};
 </script>
 
 <style scoped lang="scss">

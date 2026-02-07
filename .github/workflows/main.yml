@@ -38,6 +38,6 @@ jobs:
           set ssl:verify-certificate no;
           set net:timeout 60;
           set net:reconnect-interval 0;
-          open -u \$FTP_USERNAME,\$FTP_PASSWORD \$FTP_SERVER;
+          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER;
           mirror -R --delete ./dist /www/2klstk.ru/wp-content/themes/lstk/vue/;
           quit"

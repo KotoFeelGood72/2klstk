@@ -40,8 +40,8 @@ const { getProjects } = useProjectsStore();
 const { projects } = useProjectsStoreRefs();
 const router = useRouter();
 
-// Управление видимыми проектами
-const visibleProjects = ref<any>([]); // Список проектов, которые отображаются
+// Управление видимыми проектами (тип с id для открытия модалки)
+const visibleProjects = ref<Array<{ id: number }>>([]);
 const itemsPerPage = 6; // Количество проектов на странице
 let currentPage = 1; // Текущая страница
 

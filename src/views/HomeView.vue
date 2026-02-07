@@ -33,6 +33,7 @@
     <QuizForm />
     <SystemsBlock />
     <AdvBlock />
+    <Projects />
     <section class="imagine">
       <div class="container imagine__in">
         <h2 class="imagine__title">
@@ -237,6 +238,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import btn from "@/components/ui/btn.vue";
 import PromoSlider from "@/components/blocks/PromoSlider.vue";
 import QuizForm from "@/components/QuizForm.vue";
+import Projects from "@/components/home/Projects.vue";
 import SystemsSlider from "@/components/home/SystemsSlider.vue";
 import SystemsBlock from "@/components/blocks/SystemsBlock.vue";
 import ExcursionForm from "@/components/ExcursionForm.vue";

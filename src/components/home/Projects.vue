@@ -9,7 +9,7 @@
             :key="'popular-projects-item' + i"
             :project="item"
             :open-in-modal="true"
-            @open="opeModalProject((item as { id: number }).id)"
+            @open="openModalForProject(item)"
           />
         </div>
 
@@ -51,6 +51,7 @@ const opeModalProject = (id: number) => {
     openModal("project");
   });
 };
+const openModalForProject = (item: { id: number }) => opeModalProject(item.id);
 
 // Функция для загрузки проектов по страницам
 const loadMore = () => {

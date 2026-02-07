@@ -93,14 +93,14 @@
           </li>
         </ul>
 
-        <div class="btn-bottom" style="text-align: center">
+        <!-- <div class="btn-bottom" style="text-align: center">
           <btn
             name="Зафиксировать цену"
             size="large"
             style="display: inline-flex"
             @click.stop="openModal('sale')"
           />
-        </div>
+        </div> -->
       </div>
     </section>
     <SystemsSlider :systems="home?.acf.case_list" :title="home?.acf?.case_title" />

@@ -3,6 +3,11 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL_ASSET),
   scrollBehavior(to, from, savedPosition) {
+    // Не скроллить при изменении только query (например, открытие модалки проекта)
+    if (to.path === from.path) {
+      return undefined;
+    }
+
     // Прокрутка к якорю
     if (to.hash) {
       return {
